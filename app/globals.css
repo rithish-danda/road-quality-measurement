@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 196 24% 6%;
+    --foreground: 196 24% 95%;
+    --card: 196 24% 6%;
+    --card-foreground: 196 24% 95%;
+    --popover: 196 24% 6%;
+    --popover-foreground: 196 24% 95%;
+    --primary: 196 53% 71%;
+    --primary-foreground: 196 24% 6%;
+    --secondary: 196 53% 34%;
+    --secondary-foreground: 196 24% 95%;
+    --muted: 196 24% 16%;
+    --muted-foreground: 196 24% 75%;
+    --accent: 196 75% 59%;
+    --accent-foreground: 196 24% 6%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 196 24% 95%;
+    --border: 196 24% 16%;
+    --input: 196 24% 16%;
+    --ring: 196 53% 71%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+/* Reset cursor styles */
+* {
+  cursor: auto;
+}
+
+a, button, [role="button"] {
+  cursor: pointer;
+}
+
+/* Blue accents */
+.text-primary {
+  color: #4A8BB3;
+}
+
+.bg-primary {
+  background-color: #4A8BB3;
+}
+
+.hover\:bg-accent:hover {
+  background-color: #7ABEFF;
+}
+
+/* Subtle blue background for accent areas */
+.bg-accent\/10 {
+  background-color: rgba(74, 139, 179, 0.1);
+}
+
+/* Aspect ratio for team member images */
+.aspect-w-3 {
+  position: relative;
+  padding-bottom: calc(4 / 3 * 100%);
+}
+
+.aspect-h-4 > * {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
